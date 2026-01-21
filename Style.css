@@ -2,4 +2,10 @@
 .tieude {
   color : tomato;
   font-weight:bold;
-  font-size :45
+  font-size :45 px;
+}
+.noidung{
+  color : black;
+  font-style:normal;
+  font-size: 14 px; 
+}
