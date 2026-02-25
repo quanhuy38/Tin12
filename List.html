@@ -2,41 +2,72 @@
 <html lang="vi">
 <head>
   <meta charset="utf-8">
-  <title>Menu</title>
+  <title>Menu Ngang - Tabs</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background: #333;
-      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f4f4;
     }
+
     nav {
-      background: #333;
+      background: #2c3e50;          /* màu nền tối kiểu tab hiện đại */
+      border-bottom: 1px solid #34495e;
     }
+
     ul {
       list-style: none;
-      display: flex;           /* ← quan trọng: nằm ngang */
-      flex-wrap: wrap;         /* xuống dòng nếu màn hình nhỏ */
       margin: 0;
       padding: 0;
+      display: flex;                /* nằm ngang */
+      flex-wrap: nowrap;            /* không xuống dòng */
+      overflow-x: auto;             /* cuộn ngang nếu quá nhiều tab (trên mobile) */
     }
+
     li {
-      flex: 1;                 /* chia đều chiều ngang (tùy chọn) */
-      min-width: 140px;        /* tránh item quá hẹp */
-      text-align: center;
+      margin: 0;
+      flex-shrink: 0;               /* không bị co lại */
     }
+
     a {
       display: block;
-      padding: 14px 20px;
-      color: white;
+      padding: 14px 24px;
+      color: #ecf0f1;
       text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
+      font-weight: 500;
+      font-size: 15px;
+      transition: all 0.25s ease;
+      border-bottom: 3px solid transparent;   /* đường viền dưới để làm active */
+      white-space: nowrap;          /* không xuống dòng chữ */
     }
+
     a:hover {
-      background: #555;
-      color: #ffd700;
+      background: rgba(255,255,255,0.08);
+      color: #ffffff;
+    }
+
+    /* Khi tab được chọn (iframe load trang đó) */
+    a:active,
+    a:focus {
+      outline: none;
+      background: #34495e;
+      border-bottom: 3px solid #e74c3c;   /* màu nổi bật khi active */
+      color: #fff;
+    }
+
+    /* Tùy chọn: làm tab đầu tiên trông như đang active mặc định */
+    a[href="contents/gioithieu.html"] {
+      border-bottom: 3px solid #e74c3c;
+      background: #34495e;
+    }
+
+    /* Responsive cho mobile */
+    @media (max-width: 768px) {
+      a {
+        padding: 12px 16px;
+        font-size: 14px;
+      }
     }
   </style>
 </head>
@@ -44,10 +75,10 @@
 
 <nav>
   <ul>
-    <li><a href="contents/gioithieu.html"   target="noidung">GIỚI THIỆU</a></li>
-    <li><a href="contents/tinhoc12.html"    target="noidung">CHƯƠNG TRÌNH TIN HỌC 12</a></li>
-    <li><a href="contents/Tkb.html"         target="noidung">THỜI KHÓA BIỂU</a></li>
-    <li><a href="contents/nghenghiep.html"  target="noidung">NGHỀ NGHIỆP</a></li>
+    <li><a href="contents/gioithieu.html"    target="noidung">GIỚI THIỆU</a></li>
+    <li><a href="contents/tinhoc12.html"     target="noidung">CHƯƠNG TRÌNH TIN HỌC 12</a></li>
+    <li><a href="contents/Tkb.html"          target="noidung">THỜI KHÓA BIỂU</a></li>
+    <li><a href="contents/nghenghiep.html"   target="noidung">NGHỀ NGHIỆP</a></li>
     <li><a href="https://fond-dove-04065962.figma.site/" target="noidung">NGHỀ NGHIỆP 2.0</a></li>
   </ul>
 </nav>
