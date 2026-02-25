@@ -1,19 +1,56 @@
-<html>
-  <head>
-    <meta charset ="utf-8">
-    <link rel="stylesheet" href="../Style.css">
-      </head>
-    <body>
-      BÀI TẬP
-      <nav>
-      <ul>
-        <li> <a href="contents/gioithieu.html" target="noidung">GIỚI THIỆU</a>  </li>
-         <li> <a href="contents/tinhoc12.html" target="noidung">CHƯƠNG TRÌNH TIN HỌC 12</a>  </li>
-        <li> <a href="contents/Tkb.html" target="noidung">THỜI KHOÁ BIỂU </a></li>
-        <li> <a href="contents/nghenghiep.html" target="noidung">Nghề nghiệp </a></li>
-        <li> <a href="https://fond-dove-04065962.figma.site/" target="noidung">Nghề nghiệp 2.0 </a></li>
-      </ul>
-      </nav>
-    </body>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Menu</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #333;
+      color: white;
+    }
+    nav {
+      background: #333;
+    }
+    ul {
+      list-style: none;
+      display: flex;           /* ← quan trọng: nằm ngang */
+      flex-wrap: wrap;         /* xuống dòng nếu màn hình nhỏ */
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      flex: 1;                 /* chia đều chiều ngang (tùy chọn) */
+      min-width: 140px;        /* tránh item quá hẹp */
+      text-align: center;
+    }
+    a {
+      display: block;
+      padding: 14px 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    a:hover {
+      background: #555;
+      color: #ffd700;
+    }
+  </style>
+</head>
+<body>
 
+<nav>
+  <ul>
+    <li><a href="contents/gioithieu.html"   target="noidung">GIỚI THIỆU</a></li>
+    <li><a href="contents/tinhoc12.html"    target="noidung">CHƯƠNG TRÌNH TIN HỌC 12</a></li>
+    <li><a href="contents/Tkb.html"         target="noidung">THỜI KHÓA BIỂU</a></li>
+    <li><a href="contents/nghenghiep.html"  target="noidung">NGHỀ NGHIỆP</a></li>
+    <li><a href="https://fond-dove-04065962.figma.site/" target="noidung">NGHỀ NGHIỆP 2.0</a></li>
+  </ul>
+</nav>
+
+</body>
 </html>
