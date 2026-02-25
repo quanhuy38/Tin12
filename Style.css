@@ -1,6 +1,6 @@
 .container{
   display: flex;
-  flex-direcrtion:column;
+  flex-direction: column;
   height: 100vh;
 }
 .header{
@@ -12,7 +12,7 @@
    background-color:darkgray;
 }
 .menu a{
-  padding :15px 20 px;
+  padding: 15px 20 px;
   color: pink;
 }
 .menu hover{
@@ -35,12 +35,35 @@
    background-color:lightgray;
 }
 .tieude {
-  color : tomato;
-  font-weight:bold;
+  color: tomato;
+  font-weight:b old;
   font-size :45 px;
 }
 .noidung{
-  color : black;
-  font-style:normal;
+  color: black;
+  font-style: normal;
   font-size: 14 px; 
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+nav li a:hover {
+  background-color: #111;
 }
